@@ -35,3 +35,7 @@ span.source-chip { cursor:default; }
 .page-control button:disabled,.zoom-control button:disabled { opacity:.35; cursor:not-allowed; }
 .page-control button:not(:disabled),.zoom-control button:not(:disabled) { cursor:pointer; }
 @media (max-width:650px) { .zoom-control { display:flex; } }
+
+/* Scale the whole interface down so text is not oversized */
+.app-shell { zoom:.85; min-height:calc(100vh / .85); }
+.generated-summary { white-space:pre-line; line-height:1.7; }
