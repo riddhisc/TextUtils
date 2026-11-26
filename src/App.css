@@ -37,5 +37,48 @@ span.source-chip { cursor:default; }
 @media (max-width:650px) { .zoom-control { display:flex; } }
 
 /* Scale the whole interface down so text is not oversized */
-.app-shell { zoom:.85; min-height:calc(100vh / .85); }
+.app-shell { zoom:.92; min-height:calc(100vh / .92); }
 .generated-summary { white-space:pre-line; line-height:1.7; }
+
+/* --- Interactive additions --- */
+.sidebar-footer { cursor:pointer; }
+.chat-notice,.chat-info { margin:10px 0 0; padding:10px 12px; border-radius:9px; font-size:12px; line-height:1.55; }
+.chat-notice { background:#e9f8ef; color:#3f9a6d; }
+.chat-info { background:var(--violet-soft); color:var(--ink); }
+.sub-title { font-size:13px; margin:20px 0 0; color:var(--muted); font-weight:600; }
+.bar-row { display:grid; grid-template-columns:150px 1fr 34px; gap:12px; align-items:center; margin-top:14px; font-size:12px; }
+.bar-track { background:var(--violet-soft); border-radius:6px; height:10px; overflow:hidden; }
+.bar-fill { background:var(--violet); height:100%; border-radius:6px; }
+.bar-row b { text-align:right; }
+.heuristic-note { color:var(--muted); font-size:11px; margin:2px 4px 0; }
+.history-tools { display:flex; justify-content:space-between; align-items:center; padding:14px 0 4px; font-size:12px; color:var(--muted); }
+.text-link { border:0; background:transparent; color:var(--violet); font-weight:600; font-size:12px; cursor:pointer; padding:0; }
+.history-row.has-actions { grid-template-columns:38px 1.5fr 1fr 1fr 100px 34px; }
+.row-delete { border:0; background:transparent; color:var(--muted); font-size:14px; width:28px; height:28px; border-radius:7px; cursor:pointer; }
+.row-delete:hover { background:var(--violet-soft); color:var(--violet); }
+.notif-wrap { position:relative; }
+.popover-backdrop { position:fixed; inset:0; z-index:40; }
+.popover { position:absolute; right:0; top:56px; width:310px; z-index:41; background:#fff; border:1px solid var(--line); border-radius:13px; padding:16px; box-shadow:0 14px 34px #2f294422; text-align:left; font-size:13px; color:var(--ink); }
+.popover strong { display:block; margin-bottom:8px; }
+.popover p { color:var(--muted); font-size:12px; margin:8px 0 12px; }
+.popover-item { padding:9px 0; border-bottom:1px solid var(--line); }
+.popover-item span { display:block; font-size:12px; font-weight:600; }
+.popover-item small { display:block; color:var(--muted); font-size:11px; margin-top:3px; overflow-wrap:anywhere; }
+.top-actions .popover button { width:auto; height:auto; border:0; background:transparent; font-size:12px; border-radius:0; margin-top:10px; }
+.modal-backdrop { position:fixed; inset:0; background:#14122a88; z-index:60; display:grid; place-items:center; padding:20px; }
+.modal { background:#fff; color:var(--ink); border-radius:16px; max-width:520px; width:100%; padding:26px 28px; box-shadow:0 20px 50px #0000004a; }
+.modal h2 { margin:0 0 12px; font-size:20px; }
+.modal ul { padding-left:18px; margin:0; font-size:13px; line-height:1.7; color:var(--muted); }
+.modal li b { color:var(--ink); }
+.modal .primary-button { margin-top:20px; }
+.settings-actions .secondary-button { cursor:pointer; }
+.setting-icon { font-weight:600; font-size:16px; }
+.theme-dark .popover,.theme-dark .modal { background:#211f36; border-color:var(--line); color:var(--ink); }
+.theme-dark .chat-info { background:#2d2650; }
+.theme-dark .secondary-button,.theme-dark .writing-toolbar select,.theme-dark .editor-panel textarea,.theme-dark .rewrite-output { background:#25223d; color:var(--ink); border-color:var(--line); }
+.theme-dark .upload-box { background:transparent; }
+@media (max-width:650px) { .history-row.has-actions { grid-template-columns:34px 1fr 30px; } .history-row.has-actions>span:not(.pdf-badge),.history-row.has-actions time { grid-column:2; } .row-delete { grid-column:3; grid-row:1; } .bar-row { grid-template-columns:100px 1fr 30px; } }
+
+.theme-dark .top-actions button:not(.avatar),.theme-dark .chat-tools button,.theme-dark .popover-item { background:#211f36; color:var(--ink); border-color:var(--line); }
+.theme-dark .top-actions .popover button { background:transparent; }
+.theme-dark .chat-notice { background:#1f3a2c; color:#8fe0b3; }
