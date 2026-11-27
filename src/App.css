@@ -64,15 +64,15 @@ span.source-chip { cursor:default; }
 .notif-item span { display:block; font-size:12px; font-weight:600; }
 .notif-item small { display:block; color:var(--muted); font-size:11px; margin-top:3px; overflow-wrap:anywhere; }
 .top-actions .notif-popover button { width:auto; height:auto; border:0; background:transparent; font-size:12px; border-radius:0; margin-top:10px; }
-.help-backdrop { position:fixed; inset:0; background:#14122a88; z-index:60; display:grid; place-items:center; padding:20px; }
-.help-modal { background:#fff; color:var(--ink); border-radius:16px; max-width:520px; width:100%; padding:26px 28px; box-shadow:0 20px 50px #0000004a; }
-.help-modal h2 { margin:0 0 12px; font-size:20px; }
-.help-modal ul { padding-left:18px; margin:0; font-size:13px; line-height:1.7; color:var(--muted); }
-.help-modal li b { color:var(--ink); }
-.help-modal .primary-button { margin-top:20px; }
+
+
+
+
+
+
 .settings-actions .secondary-button { cursor:pointer; }
 .setting-icon { font-weight:600; font-size:16px; }
-.theme-dark .notif-popover,.theme-dark .help-modal { background:#211f36; border-color:var(--line); color:var(--ink); }
+.theme-dark .notif-popover,.theme-dark 
 .theme-dark .chat-info { background:#2d2650; }
 .theme-dark .secondary-button,.theme-dark .writing-toolbar select,.theme-dark .editor-panel textarea,.theme-dark .rewrite-output { background:#25223d; color:var(--ink); border-color:var(--line); }
 .theme-dark .upload-box { background:transparent; }
@@ -81,3 +81,27 @@ span.source-chip { cursor:default; }
 .theme-dark .top-actions button:not(.avatar),.theme-dark .chat-tools button,.theme-dark .notif-item { background:#211f36; color:var(--ink); border-color:var(--line); }
 .theme-dark .top-actions .notif-popover button { background:transparent; }
 .theme-dark .chat-notice { background:#1f3a2c; color:#8fe0b3; }
+
+/* --- Help page --- */
+.help-layout { display:grid; grid-template-columns:230px 1fr; gap:22px; align-items:start; }
+.help-toc { position:sticky; top:12px; display:grid; gap:3px; background:#fff; border:1px solid var(--line); border-radius:13px; padding:10px; }
+.help-toc button { border:0; background:transparent; text-align:left; padding:9px 11px; border-radius:8px; font-size:12px; color:var(--ink); }
+.help-toc button:hover { background:var(--violet-soft); color:var(--violet); }
+.help-content { display:grid; gap:18px; min-width:0; }
+.help-section { scroll-margin-top:12px; }
+.help-section h2 { margin:0 0 10px; font-size:19px; letter-spacing:-.2px; }
+.help-section h3 { margin:18px 0 4px; font-size:14px; }
+.help-section p,.help-section li { font-size:13px; line-height:1.75; color:var(--muted); }
+.help-section p { margin:0 0 10px; }
+.help-section ol,.help-section ul { padding-left:20px; margin:6px 0 10px; }
+.help-section b { color:var(--ink); }
+.help-audience { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:12px; }
+.help-audience div { border:1px solid var(--line); border-radius:10px; padding:14px; font-size:12px; line-height:1.65; color:var(--muted); }
+.help-audience b { display:block; font-size:13px; margin-bottom:4px; }
+.help-guide-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; }
+.help-guide-head h2 { margin:0; }
+.help-guide-icon { width:38px; height:38px; border-radius:10px; background:var(--violet-soft); color:var(--violet); display:grid; place-items:center; font-size:17px; }
+.help-label { margin:14px 0 2px; font-size:11px; font-weight:600; letter-spacing:.7px; text-transform:uppercase; color:var(--violet); }
+.help-open { margin-top:8px; cursor:pointer; }
+.theme-dark .help-toc { background:#211f36; border-color:var(--line); }
+@media (max-width:900px) { .help-layout { grid-template-columns:1fr; } .help-toc { position:static; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); } }
